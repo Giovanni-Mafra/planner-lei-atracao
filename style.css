@@ -1,0 +1,153 @@
+/* Definições Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FFEDE6; /* Branco Suave */
+    color: #000000; /* Letras Pretas */
+    line-height: 1.6;
+}
+
+/* Navegação */
+header {
+    background-color: #EABB65;
+    padding: 20px 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+/* Hero Section */
+/* 1. Definimos a animação de movimento do brilho */
+@keyframes brilhoDourado {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 2. Aplicamos o fundo animado à secção Hero */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+
+    /* Criamos um gradiente mais complexo com as tuas cores */
+    background: linear-gradient(-45deg, #EABB65, #D29931, #FFEDE6, #D29931);
+    
+    /* Aumentamos o tamanho do fundo para que ele possa "correr" */
+    background-size: 400% 400%;
+    
+    /* Chamamos a animação: nome | duração | modo infinito | suave */
+    animation: brilhoDourado 10s ease infinite;
+    
+    color: #000; /* Garante que o texto permanece preto e legível */
+}
+
+/* Pequeno ajuste para destacar o texto sobre o fundo animado */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Sombra suave branca para legibilidade */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Botão de Chamada para Ação */
+.cta-button {
+    background-color: #000;
+    color: #FFEDE6;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: #333;
+}
+
+/* Benefícios */
+.features {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #D29931;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #EABB65;
+    font-size: 0.9rem;
+}
+
+/* Estilo para a imagem do Planner */
+.hero-image {
+    max-width: 600px; /* Define o tamanho máximo da largura */
+    height: auto;     /* Mantém a proporção da altura */
+    margin-bottom: 20px;
+    border-radius: 10px; /* Bordas levemente arredondadas */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
+}
+
+/* Garantir que o conteúdo do Hero esteja bem distribuído */
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
